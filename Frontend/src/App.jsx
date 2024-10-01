@@ -11,7 +11,7 @@ function App() {
   const [error, setError] = useState(null);
 
   const axios1 = axios.create({
-    baseURL: 'http://localhost:8000',
+    baseURL: 'https://leetcode-oys1.onrender.com/',
     
   });
 
@@ -21,7 +21,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios1.get(`http://localhost:8000/profile/${username}`);
+      const response = await axios1.get(`profile/${username}`);
       console.log(response.data);
       setProfile(response.data.profile);
     } catch (err) {
